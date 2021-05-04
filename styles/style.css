@@ -64,6 +64,7 @@ footer {
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    margin: 15px;
 }
 
 .gutter-right {
@@ -93,21 +94,6 @@ footer {
     box-shadow: var(--shadow);
 }
   
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
+  button {
+      margin: 10px
   }
