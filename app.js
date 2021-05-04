@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 import { countAsYes } from '../utils.js';
+import { countAsNo } from '../utils.js';
 
 const quizButton = document.getElementById('button');
 const results = document.getElementById('results')
@@ -28,20 +29,17 @@ quizButton.addEventListener('click', () => {
     let points = 0;
 
     if (countAsYes(firstAnswer)) {
-        points = points++;
+        points = points + 1;
     }
 
     if (countAsYes(secondAnswer)) {
-        points = points++;
+        points = points + 1;
     }
 
-    if (!countAsYes(thirdAnswer)) {
-        points = points++;
+    if (countAsNo(thirdAnswer)) {
+        points = points + 1;
     }
-
 
     results.textContent = `Yo ${firstName} ${lastName}! You finised the quiz with a score of ${points} out of 3.`;
 
-
-    
 });

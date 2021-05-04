@@ -97,3 +97,9 @@ footer {
   button {
       margin: 10px
   }
+
+  #results {
+      font-weight: bold;
+      color: black;
+
+  }

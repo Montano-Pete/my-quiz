@@ -3,3 +3,9 @@ export function countAsYes(userInput) {
 
     return firstLetter === 'y';
 }
+
+export function countAsNo(userInput) {
+    const firstLetter = userInput[0].toLowerCase();
+
+    return firstLetter === 'n';
+}
