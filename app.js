@@ -1,17 +1,12 @@
-// import functions and grab DOM elements
 import { countAsYes } from '../utils.js';
 import { countAsNo } from '../utils.js';
 
 const quizButton = document.getElementById('button');
-const results = document.getElementById('results')
-
-// initialize state
-
-// set event listeners to update state and DOM
+const results = document.getElementById('results');
 
 quizButton.addEventListener('click', () => {
 
-    alert('Welcome to the Power Rangers quiz!')
+    alert('Welcome to the Power Rangers quiz!');
 
     const engageQuiz = confirm('Proceed to quiz?');
     
@@ -26,9 +21,10 @@ quizButton.addEventListener('click', () => {
     const secondAnswer = prompt('The giant assault machines Power Rangers operates are called Zords?');
     const thirdAnswer = prompt('Red, Blue, and Yellow rangers are the only three colors to appear in every ranger team?');
 
+
     let points = 0;
 
-    if (countAsYes(firstAnswer)) {
+    if (countAsNo(firstAnswer)) {
         points = points + 1;
     }
 
@@ -42,4 +38,5 @@ quizButton.addEventListener('click', () => {
 
     results.textContent = `Yo ${firstName} ${lastName}! You finised the quiz with a score of ${points} out of 3.`;
 
+    console.log(points);
 });
